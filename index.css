@@ -5,10 +5,9 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
-body {
-  min-height: 100vh;
+body{
+    min-height: 1200px;
 }
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -35,22 +34,38 @@ header {
   color: #fff;
   position: fixed;
   top: 0;
-  height: 100%;
+  height: 100vh;
   width: 100%;
   z-index: 100;
   text-align: center;
-  clip-path:circle(30px at 50% 25px)
+  clip-path:circle(30px at 50% 25px);
+  transition: .3s ease-in-out all;
 }
+/* Class Active with JS */
 .menu.active{
-  clip-path:circle(100% at 50% 0)
-
+  clip-path:circle(100% at 50% 40%)
 }
+.menu.active li {
+animation: transition-li 1.2s ease-in-out;
+}
+
 .icon-container {
   font-size: 2.8rem;
   cursor: pointer;
 }
 .icon-container:hover {
   animation: rotate 0.5s alternate;
+}
+
+/* Animation LI */
+@keyframes transition-li {
+    /* FROM LEFT TO RIGTH */
+    from{
+        transform: translateX(-1000px)
+    }
+    to{
+        transform: translateX(0)
+    }
 }
 @keyframes rotate {
   0% {
