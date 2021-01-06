@@ -8,6 +8,10 @@
 body{
     min-height: 1200px;
 }
+.icons{
+    position: absolute;
+    top: 36em;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -48,6 +52,10 @@ header {
 .menu.active li {
 animation: transition-li 1.2s ease-in-out;
 }
+.menu.active .icons{
+animation: transition-icons 1.2s ease-in-out;
+
+}
 
 .icon-container {
   font-size: 2.8rem;
@@ -67,6 +75,18 @@ animation: transition-li 1.2s ease-in-out;
         transform: translateX(0)
     }
 }
+/* Animation Icons */
+
+@keyframes transition-icons{
+    from{
+        transform: translateX(400px)
+    }
+    to{
+        transform: translateX(0)
+    }
+}
+
+/* Animation Icons HAmbuerger */
 @keyframes rotate {
   0% {
     transform: rotate(0deg);
